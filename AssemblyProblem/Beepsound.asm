@@ -1,0 +1,24 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+.CODE
+MAIN:
+MOV AH,02H
+MOV DL,07       ;07--->For BeepSound
+INT 21H  
+
+MOV AH,02H      ;I use same block for multiple time for multiple beepsond
+MOV DL,07
+INT 21H
+
+MOV AH,02H
+MOV DL,07
+INT 21H
+
+MOV AH,02H
+MOV DL,07
+INT 21H
+
+MOV AH,4CH
+INT 21H
+END MAIN
